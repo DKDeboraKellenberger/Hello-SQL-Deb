@@ -1,3 +1,6 @@
+/* ACLARACIÓN: La cláusula WHERE no pude ir con funciones de agregación, 
+para eso es que se incorporó la cláusula HAVING a SQL*/
+
 -- Filtra todos los datos de la tabla 'users' con edad igual a 15
 SELECT * FROM users WHERE age = 15;
 
