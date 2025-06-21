@@ -41,4 +41,4 @@ JOIN languages ON users_languages.languages_id = languages.languages_id;
 SELECT users.name, languages.name FROM users_languages -- partiendo de la tabla de relaciones
 JOIN users ON users_languages.user_id = users.user_id -- se relaciona el campo en comun entre la de relaciones + la tabla 'users'
 JOIN languages ON users_languages.languages_id = languages.languages_id; -- se relaciona el campo en comun entre la tabla de 
--- + la tabla 'languages', y asi quedan interconectadas tas tres tablas
+-- + la tabla 'languages', y asi quedan interconectadas tas tres tablas.
