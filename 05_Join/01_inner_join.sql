@@ -1,5 +1,6 @@
 
-/*  INNER JOIN */
+/*  INNER JOIN */ 
+/* DEVUELVE LOS DATOS EN COMUHN DE LAS TABLAS A RELACIONAR
 
 -- Obtiene los datos de los usuarios que tienen dni, mediante el campo en comun 'user_id' que esta en las dos tablas
 -- NNER JOIN nunca nos traerá usuarios que no tengan dni, ni dni's que no tengan usuario, SÓLO LOS REGISTROS EN COMUN
