@@ -6,7 +6,12 @@ SELECT *  FROM users
 LEFT JOIN dni
 ON users.user_id = dni.user_id;
 
--- Selecciona solo los nombres de todos los usuarios y su dni (lo tenga o no)
+-- Selecciona todos los nombres de los usuarios y su dni (lo tenga o no)
 SELECT name, dni_number FROM users
 LEFT JOIN dni
+ON users.user_id = dni.user_id;
+
+--Selecciona todos los dni junto co el nombre de su respectivo usuario (lo tenga o no)
+SELECT name, dni_number FROM dni
+LEFT JOIN users 
 ON users.user_id = dni.user_id;
