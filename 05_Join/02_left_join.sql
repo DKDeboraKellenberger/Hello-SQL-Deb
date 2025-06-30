@@ -1,22 +1,24 @@
 /* LEFT JOIN */
-/* Se trae los los datos de la primera tabla que tiene en comun con la segunda, pero no trae los datos de la segunda tabla */
+/* Se trae todas las filas de la primera tabla, pero de la segunda tabla sólo trae las filas que concidan en cuanto 
+al registro indicado en común*/
 
--- Selecciona todos los campos de la primera tabla ('users') junto a su dni (lo tenga o no) ya que respetamos a la primera
+-- Selecciona todos las filas de la primera tabla 'users' junto con los datos que coincidan de la tabla 'dni' segun el user_id
+-- Es decir, me tare todas las filas de users, y de dni traerá sólo las filas que tengan un user_id
 SELECT *  FROM users
 LEFT JOIN dni
 ON users.user_id = dni.user_id;
 
--- Selecciona todos los nombres de los usuarios y su dni (lo tenga o no)
+-- Selecciona todos los nombres de los usuarios y su nro de dni unicamente de los registros que tengan un user_id
 SELECT name, dni_number FROM users
 LEFT JOIN dni
 ON users.user_id = dni.user_id;
 
---Selecciona todos los dni junto con el nombre de su respectivo usuario (lo tenga o no)
+--Selecciona todos los dni junto con el nombre de su respectivo usuario si es que tiene un user_id
 SELECT name, dni_number FROM dni
 LEFT JOIN users 
 ON users.user_id = dni.user_id;
 
--- Selecciona todos los usuarios junto con sus lenguajes que maneja (los tenga o no)
+-- Selecciona todos los usuarios junto con los lenguajes que maneja, los tenga o no
 SELECT users.name, languages.name FROM users
 LEFT JOIN users_languages ON users.user_id = users_languages.user_id
 LEFT JOIN languages ON users_languages.language_id = languages.language_id;
